@@ -76,6 +76,10 @@ for x in tup3:
     print ('every x :',x)
 print('计算tup3的长度:',len(tup3))
 # max(tuple)返回元组中元素最大值。min(tuple) 返回元组中元素最小值。
+# 	min(tuple)返回元组中元素最小值。
+list5= ['Google', 'Taobao', 'Runoob', 'Baidu']
+tuple5=tuple(list5)
+print('tuple()将列表转化为元组:',list5,tuple5)
 # 5.函数，杨辉三角
 print('5.函数，杨辉三角')
 def yhFn(n,m):
@@ -96,3 +100,27 @@ import calendar
 cal = calendar.month(2018, 2)
 print("以下输出2018年2月份的日历:")
 print(cal)
+# 7.条件控制
+print('7.条件控制')
+age = int(input("请输入你家狗狗的年龄: "))
+print("")
+if age < 0:
+    print("你是在逗我吧!")
+elif age == 1:
+    print("相当于 14 岁的人。")
+elif age == 2:
+    print("相当于 22 岁的人。")
+elif age > 2:
+    human = 22 + (age - 2) * 5
+    print("对应人类年龄: ", human)
+### 退出提示
+input("点击 enter 键退出")
+
+# 8.循环语句
+print('8.循环语句')
+count = 0
+while count < 4:
+    print ('count:',count)
+    count+=1
+else:  #也可以不加else
+    print ('count:',count,'大于或等于4')
