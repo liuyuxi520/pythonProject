@@ -1,5 +1,5 @@
-# python3 最新语法
 # -*- coding: UTF-8 -*-
+# python3 最新语法
 print('Hello, Python!')
 
 # 1.Python 中的变量不需要声明。每个变量在使用前都必须赋值，变量赋值以后该变量才会被创建
@@ -16,7 +16,7 @@ print('a,b,c',a,b,c)
 
 
 # 2.python最具特色的就是使用缩进来表示代码块，不需要使用大括号 {} 。像if、while、def和class这样的复合语句，首行以关键字开始，以冒号( : )结束.
-print('2.python最具特色的就是使用缩进来表示代码块，不需要使用大括号 {} 。像if、while、def和class这样的复合语句，首行以关键字开始，以冒号( : )结束.')
+print('2.python最具特色的就是使用缩进来表示代码块，不需要使用大括号 。像if、while、def和class这样的复合语句，首行以关键字开始，以冒号( : )结束.')
 if False:
     print('True 是我')
 elif True:
@@ -49,8 +49,8 @@ print(str[2:]) #输出从第三个开始后的所有
 
 # 5.数据类型 列表
 print('5.数据类型 列表')
-list1 = ['Google', 'Runoob', 1997, 2000];
-list2 = [1, 2, 3, 4, 5, 6, 7 ];
+list1 = ['Google', 'Runoob', 1997, 2000]
+list2 = [1, 2, 3, 4, 5, 6, 7 ]
 list3 = list1 + list2
 print ("list1[0]: ", list1[0])
 print ("list2[1:5]: ", list2[1:5])
@@ -102,19 +102,16 @@ print("以下输出2018年2月份的日历:")
 print(cal)
 # 7.条件控制
 print('7.条件控制')
-age = int(input("请输入你家狗狗的年龄: "))
-print("")
+age = int(input('请输入你家狗狗的年龄: '))
 if age < 0:
-    print("你是在逗我吧!")
+    print('你是在逗我吧!')
 elif age == 1:
-    print("相当于 14 岁的人。")
+    print('相当于 14 岁的人。')
 elif age == 2:
-    print("相当于 22 岁的人。")
+    print('相当于 22 岁的人。')
 elif age > 2:
     human = 22 + (age - 2) * 5
-    print("对应人类年龄: ", human)
-### 退出提示
-input("点击 enter 键退出")
+    print('对应人类年龄: ', human)
 
 # 8.循环语句
 print('8.循环语句')
@@ -122,5 +119,24 @@ count = 0
 while count < 4:
     print ('count:',count)
     count+=1
-else:  #也可以不加else
-    print ('count:',count,'大于或等于4')
+else:
+    print ('大于或等于4count:',count)
+
+#9.迭代器，生成器
+print('9.迭代器，生成器')
+list3=[1,2,3,4]
+it = iter(list3)    # 创建迭代器对象
+for x in it:
+    print (x)
+def foo2():
+    print('begin')
+    for i in range(5):
+        print('before yield',i)
+        yield i
+        print('after yield',i)
+    print('end')        
+f = foo2()
+f.next() #begin <br> ('before yield',0)
+f.next() #('after yield',0) <br> ('before yield',1)
+
+
