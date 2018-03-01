@@ -154,7 +154,7 @@ for i in yhsj:
 def yhsjFn2(n):
     Li = [1]
     while True:
-        if n < len(Li):
+        if n < len(Li): 
             return
         yield Li
         Li = [1]+[Li[i] + Li[i+1] for i in range(len(Li)-1)]+[1]
@@ -187,7 +187,7 @@ print('杨辉三角位置值',yhFn(7,3),yhFn(7,4),yhFn(7,5),yhFn(8,4),yhFn(10,3)
 # 13.斐波那契
 print ('13.斐波那契')
 def fibonacci(n): # 生成器函数 - 斐波那契
-    a, b, counter = 0, 1, 0
+    a, b, counter = 1 , 1, 0
     while True:
         if (counter > n): 
             return
@@ -232,4 +232,19 @@ def selectSort(lists):
                 lists[i],lists[j] = lists[j],lists[i]
     return lists  
 print('选择排序：',selectSort([8,5,2,3,1,3]))
+
+# 16.插入排序
+print('16.插入排序')
+
+def insertSort(list):
+    lang = len(list)
+    for i in range(1,lang):
+        key = list[i]
+        j = i - 1
+        while j>=0:
+            if list[j] > key:
+                list[j+1]=list[j]
+                list[j] = key
+            j-=1
+    return list           
     
